@@ -3,8 +3,8 @@
 // import UseStateWithObject from '../src/components/UseState/UseStateWithObject';
 // import UseStateWithArray from '../src/components/UseState/UseStateWithArray';
 // import UseEffectAfterRender from '../src/components/UseEffect/UseEffectAfterRender';
-
-import ConditionallyRunUseEffect from '../src/components/UseEffect/ConditionallyRunUseEffect';
+// import ConditionallyRunUseEffect from '../src/components/UseEffect/ConditionallyRunUseEffect';
+import FetchDataWithUseEffect from '../src/components/UseEffect/FetchDataWithUseEffect';
 
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
             {/*<UseStateWithObject/>*/}
             {/*<UseStateWithArray/>}*/}
             {/*<UseEffectAfterRender/>*/}
-            <ConditionallyRunUseEffect/>
+            {/*<ConditionallyRunUseEffect/>*/}
+            <FetchDataWithUseEffect/>
         </div>
     );
 }
