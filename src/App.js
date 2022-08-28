@@ -2,8 +2,9 @@
 // import PrevState from '../src/components/UseState/PrevState';
 // import UseStateWithObject from '../src/components/UseState/UseStateWithObject';
 // import UseStateWithArray from '../src/components/UseState/UseStateWithArray';
+// import UseEffectAfterRender from '../src/components/UseEffect/UseEffectAfterRender';
 
-import UseEffectAfterRender from '../src/components/UseEffect/UseEffectAfterRender';
+import ConditionallyRunUseEffect from '../src/components/UseEffect/ConditionallyRunUseEffect';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
         <div className="App">
             {/*<UseStateWithObject/>*/}
             {/*<UseStateWithArray/>}*/}
-            <UseEffectAfterRender/>
+            {/*<UseEffectAfterRender/>*/}
+            <ConditionallyRunUseEffect/>
         </div>
     );
 }
