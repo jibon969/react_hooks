@@ -17,7 +17,7 @@ const PrevState = () => {
                 <h2>Use state hook with prev state</h2>
                 <hr/>
                 <h4>Count : {count}</h4>
-                <button onClick={() => incrementTen()}>Increment</button>
+                <button onClick={() => incrementTen() }>Increment</button>
             </div>
         </div>
     )
