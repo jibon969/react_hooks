@@ -5,11 +5,11 @@
 // import UseEffectAfterRender from '../src/components/UseEffect/UseEffectAfterRender';
 // import ConditionallyRunUseEffect from '../src/components/UseEffect/ConditionallyRunUseEffect';
 // import FetchDataWithUseEffect from '../src/components/UseEffect/FetchDataWithUseEffect';
-
+// import PostRequest from '../src/components/RequestData/PostRequest'
 
 // Request
 
-import PostRequest from '../src/components/RequestData/PostRequest'
+import Routes from '../src/routes/index'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
 
             {/* All Request ********************/}
 
-            <PostRequest/>
+            <Routes/>
 
         </div>
     );
