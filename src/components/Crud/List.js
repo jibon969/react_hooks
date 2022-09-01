@@ -31,6 +31,33 @@ const StudentList = () => {
         getData()
     }, []);
 
+
+    // Get single data
+
+    const getSingleData = (id) => {
+        fetch(`http://127.0.0.1:8000/api/update-student/${id}/`)
+            .then((response) => response.json())
+            .then((actualData) => setStudent(actualData))
+            .catch((err) => {
+                console.log(err.message)
+            });
+    };
+
+
+    // Delete user
+    const deleteStudent = (id) => {
+        fetch(`http://127.0.0.1:8000/api/delete-student/${id}/`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then((remove) => console.log("removed :", remove))
+            .catch((err) => {
+                console.log(err.message)
+            })
+
+    };
+
     return (
         <div>
             <div className="container my-5">
@@ -63,13 +90,17 @@ const StudentList = () => {
                             {
                                 student.map((data) => (
                                     <tr>
-                                        <th scope="row" key={data.id}>{data.id}</th>
+                                        <th scope="row" className="text-center" key={data.id}>{data.id}</th>
                                         <td className="text-center">{data.name}</td>
                                         <td className="text-center">{data.dept}</td>
                                         <td className="text-center">{data.roll}</td>
                                         <td className="text-center">
-                                            <button className="btn btn-info mx-2">Edit</button>
-                                            <button className="btn btn-warning">Delete</button>
+                                            <Link to={`/update/${data.id}`} className="btn btn-info mx-2">Edit</Link>
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() => deleteStudent(data.id)}>
+                                                Delete
+                                            </button>
                                         </td>
                                     </tr>
                                 ))
@@ -77,6 +108,21 @@ const StudentList = () => {
 
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <div style={{float: "right"}}>
+                            <nav aria-label="Page navigation example">
+                                <ul className="pagination">
+                                    <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                                    <li className="page-item"><a className="page-link" href="#">1</a></li>
+                                    <li className="page-item"><a className="page-link" href="#">2</a></li>
+                                    <li className="page-item"><a className="page-link" href="#">3</a></li>
+                                    <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>

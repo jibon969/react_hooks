@@ -11,7 +11,7 @@ const Index = () => {
       <Routes>
         <Route path="/" element={<List />} />
         <Route path="/add" element={<Add />} />
-        <Route path="/update" element={<Update />} />
+        <Route path="/update/:id" element={<Update />} />
         <Route path="/delete" element={<Delete />} />
       </Routes>
     </>
